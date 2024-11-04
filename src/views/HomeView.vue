@@ -17,6 +17,10 @@
           <li>
             <router-link :to="{ name: 'redmine' }"> Получить список ошибок из Redmine </router-link>
           </li>
+
+          <li>
+            <router-link :to="{ name: 'gitlab' }"> Получить список коммитов из Gitlab </router-link>
+          </li>
         </ul>
       </section>
     </main>

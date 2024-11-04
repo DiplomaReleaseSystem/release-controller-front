@@ -7,6 +7,11 @@ import SettingsProfileView from "./views/SettingsProfileView.vue";
 import UserView from "./views/UserView.vue";
 import NotFoundView from "./views/NotFoundView.vue";
 import RedmineView from "./views/RedmineView.vue";
+import GitlabView from "./views/GitlabView.vue";
+
+// Import Bootstrap and BootstrapVue CSS files (order is important)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 const router = createRouter({
     routes: [
@@ -19,6 +24,11 @@ const router = createRouter({
             path: "/redmine",
             name: "redmine",
             component: RedmineView,
+        },
+        {
+            path: "/gitlab",
+            name: "gitlab",
+            component: GitlabView,
         },
         {
             path: "/settings",
@@ -57,4 +67,5 @@ router.beforeEach((to) => {
 
 const app = createApp(App);
 app.use(router);
+// Make BootstrapVue available throughout your project
 app.mount("#app");
